@@ -48,12 +48,14 @@ nav ul li {
   margin-right: 1rem;
 }
 
-nav a, nav a:visited {
+nav a,
+nav a:visited {
   color: #fff;
   text-decoration: none;
 }
 
-nav a:hover, nav a:focus {
+nav a:hover,
+nav a:focus {
   text-decoration: underline;
 }
 
@@ -67,6 +69,12 @@ section {
 }
 
 article {
+  margin: 0.5em;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 1em;
+}
+search {
   margin: 0.5em;
   border: 1px solid #000;
   border-radius: 10px;
@@ -101,13 +109,13 @@ textarea {
   font-size: 1rem;
 }
 
-.postCredit a, 
+.postCredit a,
 .postCredit a:visited {
   margin-right: 0.5rem;
   color: black;
 }
 
-.postCredit a:hover, 
+.postCredit a:hover,
 .postCredit a:focus {
   color: hsla(0, 0%, 0%, 0.75);
 }
@@ -127,4 +135,27 @@ textarea {
 .deleteButton {
   background-color: palevioletred;
   color: white;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 0.5px solid #333;
+}
+
+.new-post {
+  display: flex;
+  flex-direction: row;
+  justify-content: center
+}
+
+.searchbox {
+  width: 90%;
+}
+
+.searchbutton {
+  width: 10%;
+  border: none;
+  background: transparent;
 }

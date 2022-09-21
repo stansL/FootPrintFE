@@ -7,17 +7,20 @@
       "userId": 1,
       "reactions": {
         "thumbsUp": 3,
-        "wow": 0,
-        "heart": 0,
-        "rocket": 0,
-        "coffee": 0
+        "thumbsDown": 3,
+        "heart": 1
       }
     },
     {
-      "userId": 1,
       "id": 2,
-      "title": "qui est esse",
-      "body": "est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea dolores neque fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis qui aperiam non debitis possimus qui neque nisi nulla"
+      "title": "test v1 here",
+      "body": "poor guys when it comes to dummy text",
+      "userId": 3,
+      "reactions": {
+        "thumbsUp": 6,
+        "thumbsDown": 15,
+        "heart": 8
+      }
     },
     {
       "userId": 1,
