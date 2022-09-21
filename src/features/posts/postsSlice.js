@@ -24,6 +24,11 @@ export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
   return response.data;
 });
 
+export const searchPosts = createAsyncThunk("posts/searchPosts", async (query) => {
+  const response = await axios.get(`${POSTS_URL}/footprints/tag/${query}`);
+  return response.data;
+});
+
 export const addNewPost = createAsyncThunk(
   "posts/addNewPost",
   async (initialPost) => {

@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { selectPostIds, getPostsStatus, getPostsError } from "./postsSlice";
 import PostsExcerpt from "./PostsExcerpt";
-import SearchPost from "./SearchPost";
+import SearchPosts from "./SearchPost";
 
 const PostsList = () => {
 
@@ -20,7 +20,7 @@ const PostsList = () => {
 
     return (
         <section>
-            <SearchPost />
+            <SearchPosts />
             {content}
         </section>
     )

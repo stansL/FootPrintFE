@@ -2,32 +2,34 @@ import React from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch } from "react-redux";
+import { fetchPosts } from "./postsSlice";
 
-const SearchPost = () => {
+const SearchPosts = () => {
+  const dispatch = useDispatch();
   const [query, setQuery] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    // addTodo({ userId: 1, title: newTodo, completed: false });
-    console.log("Perfom the search");
+    dispatch(fetchPosts());
     setQuery("");
   };
 
   return (
     <div className="new-post">
-        <input
-          type="text"
-          id="new-todo"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Enter search term"
-          className="searchbox"
-          />
+      <input
+        type="text"
+        id="new-todo"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Enter search term"
+        className="searchbox"
+      />
 
-        <button className="searchbutton" onClick={handleSubmit}>
-          <FontAwesomeIcon icon={faSearch} />
-        </button>
+      <button className="searchbutton" onClick={handleSubmit}>
+        <FontAwesomeIcon icon={faSearch} />
+      </button>
     </div>
   );
 };
 
-export default SearchPost;
+export default SearchPosts;
