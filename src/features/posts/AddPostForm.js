@@ -11,6 +11,7 @@ const AddPostForm = () => {
     const navigate = useNavigate()
 
     const [title, setTitle] = useState('')
+    const [tag, setTag] = useState('')
     const [content, setContent] = useState('')
     const [userId, setUserId] = useState('')
     const [addRequestStatus, setAddRequestStatus] = useState('idle')
@@ -18,6 +19,7 @@ const AddPostForm = () => {
     const users = useSelector(selectAllUsers)
 
     const onTitleChanged = e => setTitle(e.target.value)
+    const onTagChanged = e => setTag(e.target.value)
     const onContentChanged = e => setContent(e.target.value)
     const onAuthorChanged = e => setUserId(e.target.value)
 
@@ -60,6 +62,14 @@ const AddPostForm = () => {
                     name="postTitle"
                     value={title}
                     onChange={onTitleChanged}
+                />
+                <label htmlFor="postTag">Footprint Tag:</label>
+                <input
+                    type="text"
+                    id="postTag"
+                    name="postTag"
+                    value={tag}
+                    onChange={onTagChanged}
                 />
                 <label htmlFor="postAuthor">Author:</label>
                 <select id="postAuthor" value={userId} onChange={onAuthorChanged}>

@@ -13,6 +13,7 @@ const EditPostForm = () => {
     const users = useSelector(selectAllUsers)
 
     const [title, setTitle] = useState(post?.title)
+    const [tag, setTag] = useState('')
     const [content, setContent] = useState(post?.body)
     const [userId, setUserId] = useState(post?.userId)
     const [requestStatus, setRequestStatus] = useState('idle')
@@ -28,6 +29,7 @@ const EditPostForm = () => {
     }
 
     const onTitleChanged = e => setTitle(e.target.value)
+    const onTagChanged = e => setTag(e.target.value)
     const onContentChanged = e => setContent(e.target.value)
     const onAuthorChanged = e => setUserId(Number(e.target.value))
 
@@ -85,6 +87,14 @@ const EditPostForm = () => {
                     name="postTitle"
                     value={title}
                     onChange={onTitleChanged}
+                />
+                <label htmlFor="postTag">Footprint Tag:</label>
+                <input
+                    type="text"
+                    id="postTag"
+                    name="postTag"
+                    value={tag}
+                    onChange={onTagChanged}
                 />
                 <label htmlFor="postAuthor">Author:</label>
                 <select id="postAuthor" value={userId} onChange={onAuthorChanged}>
